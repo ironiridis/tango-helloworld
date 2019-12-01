@@ -11,7 +11,7 @@ func main() {
 	h := rpc.NewHandle(os.Stdout, os.Stdin)
 
 	hellomsg := rpc.UIDefineCategory{Label: "Hello"}
-	err = h.Send(&hellomsg)
+	err = h.Send(&hellomsg, false)
 	if err != nil {
 		panic(err)
 	}
